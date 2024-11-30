@@ -1,0 +1,29 @@
+@use "../../styles/partial/partial" as *;
+
+.navbar {
+  background-color: $lpurple;
+  height: fit-content;
+  margin: 0;
+
+  &__name {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 0 0;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 1rem;
+  }
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 1rem;
+}
+
+.navbar__link {
+  padding: 1rem 1rem 1.5rem 1rem;
+}
