@@ -1,8 +1,3 @@
-# React + Vite
+Lloydminster Tutoring Services Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Welcome to the Lloydminster Tutoring Services Website, built by Iris — a passionate Software Engineer and dedicated STEM Tutor. This website showcases my expertise in both software development and educational support, helping students achieve their academic goals while demonstrating my REACT web development techniques.
