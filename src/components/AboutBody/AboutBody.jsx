@@ -10,8 +10,8 @@ function AboutBody() {
           <img className="about__img" src={tutor} alt="Tutor Iris" />
         </div>
         <div className="about__details">
-          <p>
-            <strong>Year of Experience:</strong> 10+{" "}
+          <p className="about__exp">
+            <strong>Tutor Experience:</strong> 10+ years{" "}
           </p>
           <p>
             <strong>Bachelor of Science degree:</strong> University of Toronto
@@ -19,9 +19,9 @@ function AboutBody() {
           </p>
           <p>
             <strong>Master of Science degree:</strong> University of
-            Saskatchewan (research in Cattle Supplementation){" "}
+            Saskatchewan (Research in Cattle Supplementation){" "}
           </p>
-          <p>
+          <p className="about__specialty">
             <strong>Specialty:</strong> Math and Sciences{" "}
           </p>
         </div>
