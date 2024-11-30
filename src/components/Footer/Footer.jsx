@@ -25,6 +25,10 @@ export default function Footer() {
           <FaFacebook size={24} />
         </a>
       </div>
+      <div className="footer__loc">
+        <h3>Location: </h3>
+        <p>Online AND In-person in Lloydminster, AB</p>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./BookingBody.scss";
 
 const BookingForm = () => {
   const [formData, setFormData] = useState({
@@ -63,7 +64,7 @@ const BookingForm = () => {
     }
   };
   return (
-    <div>
+    <div className="booking">
       <div className="booking__intro">
         <h3>Book a session</h3>
         <p>
@@ -80,7 +81,9 @@ const BookingForm = () => {
 
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="age">Student Age</label>
+          <label className="booking__titles" htmlFor="age">
+            Student Age
+          </label>
           <input
             id="age"
             type="number"
@@ -91,7 +94,9 @@ const BookingForm = () => {
         </div>
 
         <div className="form-group">
-          <label htmlFor="subject">Subject</label>
+          <label className="booking__titles" htmlFor="subject">
+            Subject
+          </label>
           <select
             id="subject"
             name="subject"
@@ -108,9 +113,10 @@ const BookingForm = () => {
         </div>
 
         <div className="form-group">
-          <label>Availability</label>
+          <label className="booking__titles">Availability</label>
           <div>
             <input
+              className="booking__checkbox"
               type="checkbox"
               id="no-preference"
               name="noPreference"
@@ -124,6 +130,7 @@ const BookingForm = () => {
             (day) => (
               <div key={day}>
                 <input
+                  className="booking__checkbox"
                   type="checkbox"
                   id={`${day}-evening`}
                   name="availability"
@@ -140,6 +147,7 @@ const BookingForm = () => {
           {["Saturday", "Sunday"].map((day) => (
             <div key={day}>
               <input
+                className="booking__checkbox"
                 type="checkbox"
                 id={`${day}-afternoon`}
                 name="availability"
@@ -151,6 +159,7 @@ const BookingForm = () => {
               <label htmlFor={`${day}-afternoon`}>{day} Afternoon</label>
 
               <input
+                className="booking__checkbox"
                 type="checkbox"
                 id={`${day}-evening`}
                 name="availability"
@@ -164,7 +173,9 @@ const BookingForm = () => {
           ))}
         </div>
 
-        <button type="submit">Submit</button>
+        <button className="booking__btn" type="submit">
+          Submit
+        </button>
       </form>
     </div>
   );

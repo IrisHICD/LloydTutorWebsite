@@ -29,17 +29,17 @@ function AboutBody() {
       <div className="about__about">
         <h3>Hello, I’m Iris!</h3>
         <p>
-          With over a decade of experience as a dedicated tutor, I’ve had the
-          privilege of inspiring countless students in STEM subjects. I’ve
-          devoted my evenings and weekends to tutoring because I’m passionate
-          about empowering young minds to achieve their potential. Parents often
-          tell me that my positive and engaging teaching style makes a
-          difference, helping students not only understand challenging concepts
-          but also build the confidence they need to thrive academically.
-          There's nothing more rewarding than seeing a student’s “lightbulb
-          moment” and knowing they’re on the path to future success. I’d be
-          delighted to support your child’s learning journey. Let’s work
-          together to help them reach their goals and shine in STEM!
+          With over a decade of tutoring experience, I’ve had the privilege of
+          inspiring students in STEM subjects. I’ve devoted my evenings and
+          weekends to tutoring because I’m passionate about empowering young
+          minds to achieve their potential. Parents often tell me that my
+          positive and engaging teaching style makes a difference, helping
+          students not only understand challenging concepts but also build the
+          confidence they need to thrive academically. There's nothing more
+          rewarding than seeing a student’s “lightbulb moment” and knowing
+          they’re on the path to future success. I’d be delighted to support
+          your child’s learning journey. Let’s work together to help them reach
+          their goals and shine in STEM!
         </p>
       </div>
     </div>
