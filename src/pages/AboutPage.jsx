@@ -1,11 +1,15 @@
 import React from "react";
 import "./Page.scss";
 import Navbar from "../components/Navbar/Navbar";
+import AboutBody from "../components/AboutBody/AboutBody";
 
-export default function AboutPage() {
+function AboutPage() {
   return (
     <div className="page">
       <Navbar />
+      <AboutBody />
     </div>
   );
 }
+
+export default AboutPage;
