@@ -2,10 +2,12 @@ import React from "react";
 import "./Page.scss";
 import Navbar from "../components/Navbar/Navbar";
 
-export default function AboutPage() {
+function BookingPage() {
   return (
     <div className="page">
       <Navbar />
     </div>
   );
 }
+
+export default BookingPage;

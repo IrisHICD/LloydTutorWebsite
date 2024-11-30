@@ -11,13 +11,13 @@ function Navbar() {
         </Link>
       </div>
       <div className="navbar__links">
-        <a className="navbar__link" href="#about">
+        <a className="navbar__link" href="about">
           About
         </a>
-        <a className="navbar__link" href="#booking">
+        <a className="navbar__link" href="booking">
           Booking
         </a>
-        <a className="navbar__link" href="#contact">
+        <a className="navbar__link" href="contact">
           Contact
         </a>
       </div>
