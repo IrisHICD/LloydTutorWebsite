@@ -1,5 +1,5 @@
 import React from "react";
-import { animateScroll as scroll } from "react-scroll";
+
 import { Element } from "react-scroll";
 import "./Page.scss";
 import Navbar from "../components/Navbar/Navbar";
@@ -10,12 +10,6 @@ import ContactBody from "../components/ContactBody/ContactBody";
 import AboutBody from "../components/AboutBody/AboutBody";
 
 function LandingPage() {
-  const scrollToTop = () => {
-    scroll.scrollToTop({
-      duration: 500,
-      smooth: "easeInOutQuart",
-    });
-  };
   return (
     <div className="page">
       <Navbar />
