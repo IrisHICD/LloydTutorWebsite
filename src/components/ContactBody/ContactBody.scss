@@ -1,6 +1,8 @@
+@use "../../styles/partial/partial" as *;
+
 .contact-form {
   max-width: 600px;
-  height: 70vh;
+  height: 400px;
   margin: auto;
   background-color: #f9f9f9;
   padding: 20px;
@@ -48,4 +50,21 @@
       background-color: #0056b3;
     }
   }
+}
+
+.contact__heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__success {
+  margin-left: 10%;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid $purple;
+  border-radius: 20px;
+  width: 80%;
 }

@@ -1,81 +1,49 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
+import { animateScroll as scroll } from "react-scroll";
 import "./ContactBody.scss";
 
 function ContactBody() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [state, handleSubmit] = useForm("xldeaawq");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+  const scrollToTop = () => {
+    scroll.scrollToTop({
+      duration: 500,
+      smooth: "easeInOutQuart",
+    });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // Validation
-    if (!formData.name) {
-      alert("Name is required.");
-      return;
-    }
-    if (!formData.email) {
-      alert("Email is required.");
-      return;
-    }
-    if (!formData.message) {
-      alert("Message is required.");
-      return;
-    }
-
-    try {
-      const response = await axios.post("/api/send-contact-email", formData);
-      if (response.status === 200) {
-        alert("Your message has been sent!");
-        setFormData({ name: "", email: "", message: "" }); // Clear the form
-      }
-    } catch (error) {
-      console.error("Error sending message:", error);
-      alert("Failed to send your message.");
-    }
-  };
+  if (state.succeeded) {
+    return (
+      <div className="contact__success">
+        <p>Thanks for your message! We'll get back to you soon.</p>
+        <button onClick={scrollToTop} className="btn">
+          Back to Top
+        </button>
+      </div>
+    );
+  }
 
   return (
     <div>
-      {" "}
       <form onSubmit={handleSubmit} className="contact-form">
-        <h2>Contact Us</h2>
-
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Your Name"
-            required
-          />
+        <div className="contact__heading">
+          <h3>Contact Us</h3>
+          <button onClick={scrollToTop} className="arrow__up">
+            &gt;
+          </button>
         </div>
 
         <div className="form-group">
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email">Email Address</label>
           <input
             id="email"
             type="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
             placeholder="Your Email"
             required
           />
+          <ValidationError prefix="Email" field="email" errors={state.errors} />
         </div>
 
         <div className="form-group">
@@ -83,15 +51,18 @@ function ContactBody() {
           <textarea
             id="message"
             name="message"
-            value={formData.message}
-            onChange={handleChange}
             placeholder="Your Message"
             required
           ></textarea>
+          <ValidationError
+            prefix="Message"
+            field="message"
+            errors={state.errors}
+          />
         </div>
 
-        <button type="submit" className="btn">
-          Send Message
+        <button type="submit" className="btn" disabled={state.submitting}>
+          {state.submitting ? "Sending..." : "Send Message"}
         </button>
       </form>
     </div>
