@@ -1,15 +1,25 @@
 import React from "react";
+import { animateScroll as scroll } from "react-scroll";
 import "./AboutBody.scss";
 import tutor from "../../assets/images/tutor.jpg";
 
 function AboutBody() {
+  const scrollToTop = () => {
+    scroll.scrollToTop({
+      duration: 500,
+      smooth: "easeInOutQuart",
+    });
+  };
+
   return (
     <div className="about">
       <div className="about__about">
         <div className="about__heading">
           {" "}
           <h3>About Me</h3>
-          <button className="arrow__up">&gt;</button>
+          <button onClick={scrollToTop} className="arrow__up">
+            &gt;
+          </button>
         </div>
 
         <p>
@@ -21,9 +31,9 @@ function AboutBody() {
           helping students not only understand challenging concepts but also
           build the confidence they need to thrive academically. There's nothing
           more rewarding than seeing a student’s “lightbulb moment” and knowing
-          they’re on the path to future success. I’d be delighted to support
-          your child’s learning journey. Let’s work together to help them reach
-          their goals and shine in STEM!
+          they’re on the path to success. I’d be delighted to support your
+          child’s learning journey. Let’s work together to help them reach their
+          goals!
         </p>
       </div>
       <div className="about__summary">
@@ -36,7 +46,7 @@ function AboutBody() {
           </p>
           <p>
             <strong>Bachelor of Science degree:</strong> University of Toronto
-            (double major in Genetics and Ecology)
+            (Double Major in Genetics and Ecology)
           </p>
           <p>
             <strong>Master of Science degree:</strong> University of
