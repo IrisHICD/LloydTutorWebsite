@@ -73,7 +73,11 @@ const BookingForm = () => {
   return (
     <div className="booking">
       <div className="booking__intro">
-        <h3>Book a session</h3>
+        <div className="booking__heading">
+          <h3>Book a session</h3>
+          <button className="arrow__up">&gt;</button>
+        </div>
+
         <p>
           All private tutor sessions are 1-on-1 and fully customized. Grade 1-10
           sessions are $35 per hour while Grade 11-12 or College Level sessions

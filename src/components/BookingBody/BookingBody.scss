@@ -1,5 +1,10 @@
 .booking {
   padding: 1rem;
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .form-group {
@@ -56,5 +61,18 @@
 
   &:hover {
     background-color: #0056b3;
+  }
+}
+.arrow__up {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 0 10px;
+  color: #333;
+  transform: rotate(-90deg);
+
+  &:hover {
+    color: #666;
   }
 }

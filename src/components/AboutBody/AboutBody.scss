@@ -1,6 +1,10 @@
 @use "../../styles/partial/partial" as *;
 
 .about {
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+  }
   &__summary {
     display: flex;
     flex-direction: column;
