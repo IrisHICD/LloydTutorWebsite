@@ -69,6 +69,7 @@ const BookingForm = () => {
       alert("Failed to send email.");
     }
   };
+
   return (
     <div className="booking">
       <div className="booking__intro">
@@ -79,121 +80,12 @@ const BookingForm = () => {
           are $40 per hour.
         </p>
         <p>
-          To request an appointment, please fill out the form below. Please note
-          appointments are limited. Selecting “no preference” under availability
-          will increase your chance of getting a time slot.
+          To request an appointment, email or message me on Facebook with your
+          subject of interest and availability. Note that appointments are
+          limited. Having no preference on availability will increase your
+          chance of getting a time slot.
         </p>
       </div>
-
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label className="booking__titles" htmlFor="age">
-            Student Age
-          </label>
-          <input
-            id="age"
-            type="number"
-            name="age"
-            value={formData.age}
-            onChange={handleChange}
-          />
-        </div>
-
-        <div className="form-group">
-          <label className="booking__titles" htmlFor="subject">
-            Subject
-          </label>
-          <select
-            id="subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-          >
-            <option value="">Select a subject</option>
-            <option value="math">Math</option>
-            <option value="chemistry">Chemistry</option>
-            <option value="biology">Biology</option>
-            <option value="physics">Physics</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <div className="form-group">
-          <label className="booking__titles">Availability</label>
-          <div>
-            <input
-              className="booking__checkbox"
-              type="checkbox"
-              id="no-preference"
-              name="noPreference"
-              checked={formData.noPreference}
-              onChange={handleChange}
-            />
-            <label htmlFor="no-preference">No Preference</label>
-          </div>
-
-          {["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].map(
-            (day) => (
-              <div key={day}>
-                <input
-                  className="booking__checkbox"
-                  type="checkbox"
-                  id={`${day}-evening`}
-                  name="availability"
-                  value={`${day} Evening`}
-                  onChange={handleChange}
-                  checked={formData.availability.includes(`${day} Evening`)}
-                  disabled={formData.noPreference}
-                />
-                <label htmlFor={`${day}-evening`}>{day} Evening</label>
-              </div>
-            )
-          )}
-
-          {["Saturday", "Sunday"].map((day) => (
-            <div key={day}>
-              <input
-                className="booking__checkbox"
-                type="checkbox"
-                id={`${day}-afternoon`}
-                name="availability"
-                value={`${day} Afternoon`}
-                onChange={handleChange}
-                checked={formData.availability.includes(`${day} Afternoon`)}
-                disabled={formData.noPreference}
-              />
-              <label htmlFor={`${day}-afternoon`}>{day} Afternoon</label>
-
-              <input
-                className="booking__checkbox"
-                type="checkbox"
-                id={`${day}-evening`}
-                name="availability"
-                value={`${day} Evening`}
-                onChange={handleChange}
-                checked={formData.availability.includes(`${day} Evening`)}
-                disabled={formData.noPreference}
-              />
-              <label htmlFor={`${day}-evening`}>{day} Evening</label>
-            </div>
-          ))}
-          <label className="booking__titles" htmlFor="parentEmail">
-            Parent's Email
-          </label>
-          <input
-            id="parentEmail"
-            type="email"
-            name="parentEmail"
-            value={formData.parentEmail}
-            onChange={handleChange}
-            required
-          />
-        </div>
-
-        <button className="booking__btn" type="submit">
-          Submit
-        </button>
-      </form>
     </div>
   );
 };

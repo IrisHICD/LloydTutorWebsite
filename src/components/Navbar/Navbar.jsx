@@ -1,38 +1,35 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import "./Navbar.scss";
 
 function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar__name">
-        <NavLink
-          to="/"
-          exact
-          className="navbar__title"
-          activeClassName="active"
-        >
+        <Link to="home" smooth={true} duration={500} className="navbar__title">
           Lloydminster Tutoring Services
-        </NavLink>
+        </Link>
       </div>
       <div className="navbar__links">
-        <NavLink to="/about" className="navbar__link" activeClassName="active">
+        <Link to="about" smooth={true} duration={500} className="navbar__link">
           About
-        </NavLink>
-        <NavLink
-          to="/booking"
+        </Link>
+        <Link
+          to="booking"
+          smooth={true}
+          duration={500}
           className="navbar__link"
-          activeClassName="active"
         >
           Booking
-        </NavLink>
-        <NavLink
-          to="/contact"
+        </Link>
+        <Link
+          to="contact"
+          smooth={true}
+          duration={500}
           className="navbar__link"
-          activeClassName="active"
         >
           Contact
-        </NavLink>
+        </Link>
       </div>
     </div>
   );
