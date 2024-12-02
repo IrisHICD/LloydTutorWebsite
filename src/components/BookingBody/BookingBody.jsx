@@ -8,6 +8,7 @@ const BookingForm = () => {
     subject: "",
     availability: [],
     noPreference: false,
+    parentEmail: "", // Add this field
   });
 
   const handleChange = (e) => {
@@ -50,6 +51,11 @@ const BookingForm = () => {
 
     if (!formData.noPreference && formData.availability.length === 0) {
       alert("Please select availability or choose 'No Preference'.");
+      return;
+    }
+
+    if (!formData.parentEmail) {
+      alert("Parent's email is required.");
       return;
     }
 
@@ -171,6 +177,17 @@ const BookingForm = () => {
               <label htmlFor={`${day}-evening`}>{day} Evening</label>
             </div>
           ))}
+          <label className="booking__titles" htmlFor="parentEmail">
+            Parent's Email
+          </label>
+          <input
+            id="parentEmail"
+            type="email"
+            name="parentEmail"
+            value={formData.parentEmail}
+            onChange={handleChange}
+            required
+          />
         </div>
 
         <button className="booking__btn" type="submit">

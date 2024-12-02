@@ -37,7 +37,7 @@ function ContactBody() {
     try {
       const response = await axios.post("/api/send-contact-email", formData);
       if (response.status === 200) {
-        alert("Your message has been sent successfully!");
+        alert("Your message has been sent!");
         setFormData({ name: "", email: "", message: "" }); // Clear the form
       }
     } catch (error) {
