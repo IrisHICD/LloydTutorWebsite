@@ -4,20 +4,56 @@
   &__heading {
     display: flex;
     justify-content: space-between;
+
+    @include tablet {
+      font-size: 1.5rem;
+      position: relative;
+    }
   }
+  &__tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      border-bottom: 5px solid $purple;
+    }
+  }
+
+  &__para {
+    padding: 0 2rem;
+    @include tablet {
+      width: 50vw;
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
+  }
+
   &__summary {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include tablet {
+      width: 50vw;
+    }
   }
   &__details {
     padding: 1rem 2.5rem;
     margin: 0;
+    @include tablet {
+      font-size: 1.2rem;
+    }
   }
   &__img {
     padding: 1rem 1rem 0 1rem;
     height: 45vh;
     border-radius: 2rem;
+    @include tablet {
+      width: 40vw;
+      object-fit: cover;
+    }
   }
   &__exp {
     margin-top: 0;
@@ -25,10 +61,18 @@
   &__specialty {
     margin-bottom: 0;
     padding-bottom: 1rem;
-    border-bottom: 5px solid $purple;
+
+    @include tablet {
+      border: none;
+    }
   }
   &__about {
     width: 90wv;
     margin: 1rem 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 5px solid $purple;
+    @include tablet {
+      border: none;
+    }
   }
 }

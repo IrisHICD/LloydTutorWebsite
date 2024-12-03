@@ -2,6 +2,7 @@
 .body {
   @include tablet {
     display: flex;
+    position: relative;
   }
 }
 
@@ -33,10 +34,10 @@
     background-color: whitesmoke;
     position: absolute;
     z-index: 1;
-    width: 28%;
+    width: 350px;
     height: 300px;
     left: 5%;
-    bottom: -5%;
+    bottom: 5%;
   }
 
   .arrow {
