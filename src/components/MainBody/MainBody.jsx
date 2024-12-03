@@ -34,8 +34,9 @@ function MainBody() {
           &gt;
         </button>
       </div>
-
-      <img src={freeimage} className="body__img" alt="Decorative" />
+      <div className="body__desktop">
+        <img src={freeimage} className="body__img" alt="Decorative" />
+      </div>
     </div>
   );
 }

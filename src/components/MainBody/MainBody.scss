@@ -1,3 +1,10 @@
+@use "../../styles/partial/partial" as *;
+.body {
+  @include tablet {
+    display: flex;
+  }
+}
+
 .body__img {
   max-width: 100%;
   max-height: 100%;
@@ -21,6 +28,16 @@
   justify-content: center;
   align-items: center;
   margin: 15px 0;
+  @include tablet {
+    border-radius: 10px;
+    background-color: whitesmoke;
+    position: absolute;
+    z-index: 1;
+    width: 28%;
+    height: 300px;
+    left: 5%;
+    bottom: -5%;
+  }
 
   .arrow {
     background-color: transparent;
